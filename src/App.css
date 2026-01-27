@@ -1,0 +1,265 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000000; /* Pure black background */
+  color: #ffffff; /* White text for contrast */
+  min-height: 100vh;
+  text-align: center;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main title - centered */
+.main-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.7), 0 0 20px rgba(52, 152, 219, 0.5);
+  padding-bottom: 20px;
+  border-bottom: 3px solid #3498db;
+  width: 100%;
+  text-align: center;
+}
+
+.team-name {
+  color: #e74c3c;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+}
+
+/* Team description - centered */
+.team-description {
+  background: rgba(52, 152, 219, 0.15);
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.team-description p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Team container - centered */
+.team-container {
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-subtitle {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.team-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+/* FIXED: Team members grid - properly centered */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center; /* Center items in their grid cells */
+}
+
+/* If you want responsive columns, use this instead: */
+/* .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1000px;
+} */
+
+/* Team member card - centered */
+.team-member-card {
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(52, 152, 219, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  text-align: center;
+  min-height: 350px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 30px rgba(52, 152, 219, 0.3);
+  border-color: #3498db;
+}
+
+/* Avatar - centered */
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Member info - centered */
+.member-name {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.member-role {
+  color: #bdc3c7;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Member link - centered */
+.member-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.member-link:hover {
+  background: linear-gradient(135deg, #2980b9, #1c5a7a);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.5);
+}
+
+/* Footer - centered */
+.footer {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #95a5a6;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-note {
+  margin-top: 10px;
+  font-style: italic;
+  color: #3498db;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+  .team-members {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-subtitle {
+    font-size: 2rem;
+  }
+  
+  .team-members {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    max-width: 400px;
+  }
+  
+  .App {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .team-member-card {
+    padding: 20px;
+    min-height: 300px;
+    max-width: 100%;
+  }
+  
+  .member-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
