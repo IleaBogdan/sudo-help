@@ -38,7 +38,7 @@ class App extends React.Component {
         
         {/* Team Description */}
         <div className="team-description">
-          <p>Meet our dedicated team members who make the impossible possible!</p>
+          <p>Meet our dedicated team members who make the possible impossible!</p>
         </div>
         
         {/* Team Members Section */}
